@@ -53,7 +53,6 @@ table {
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 10px;
-    background-color: black;
 }
 
 .container {
@@ -84,25 +83,37 @@ body {
 .right-col {
     display: flex;
     flex-direction: column;
+
+    background-color: #E5E7EB;
 }
 
 .row-one {
     font-size: 1.5rem;
     padding: 0.5rem;
-    
-    background-color: #E5E7EB;
+
+    padding-left: 3rem;
 }
 
 .row-two {
     font-size: 1.5rem;
     padding: 0.5rem;
+    padding-left: 2.5rem;
+
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.row-two > p {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 .row-three {
     font-size: 1.5rem;
     padding: 0.5rem;
 
-    background-color: #E5E7EB;
+    padding-left: 3rem;
 }
 
 @media (orientation: landscape) {
@@ -119,15 +130,16 @@ body {
     }
 
     .row-one {
-        flex-grow: 6;
+        flex-grow: 1;
     }
     
     .row-two {
-        flex-grow: 5;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
     
     .row-three {
-        flex-grow: 6;
+        flex-grow: 1;
     }
 }
 
@@ -182,3 +194,82 @@ body {
     filter: brightness(0) invert(1);
 }
 
+.form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form > div {
+    flex-basis: 30%;
+    
+    display: flex;
+    flex-direction: column;
+
+    margin: 0.5rem;
+    margin-right: 2rem;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.form > div > label {
+    padding-bottom: 0.25rem;
+}
+
+.form > div > input {
+    height: 28px;
+    max-width: 80%;
+}
+
+
+
+.submit-button {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.submit-button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.submit-button:hover {
+  background-color: #2c974b;
+}
+
+.submit-button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.submit-button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.submit-button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
