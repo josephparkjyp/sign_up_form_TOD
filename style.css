@@ -90,8 +90,12 @@ body {
 .row-one {
     font-size: 1.5rem;
     padding: 0.5rem;
+}
 
+.row-one > p {
     padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1.5rem;
 }
 
 .row-two {
@@ -113,7 +117,34 @@ body {
     font-size: 1.5rem;
     padding: 0.5rem;
 
+    padding-top: 2rem;
     padding-left: 3rem;
+}
+
+.submit-button {
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+.row-three > p {
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding-top: 2rem;
+}
+
+a:link, a:visited {
+    color: #2ea44f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2c974b;
+}
+
+a:active {
+    color: #298e46;
 }
 
 @media (orientation: landscape) {
@@ -131,6 +162,13 @@ body {
 
     .row-one {
         flex-grow: 1;
+        position: relative;
+    }
+
+    .row-one > p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
     
     .row-two {
@@ -160,11 +198,13 @@ body {
     }
 
     .row-one {
-        flex-grow: 1;
+        flex-grow: 0;
+        padding-top: 2rem;
     }
     
     .row-two {
-        flex-grow: 1;
+        flex-grow: 0;
+        padding-bottom: 2rem;
     }
     
     .row-three {
@@ -214,15 +254,26 @@ body {
 }
 
 .form > div > label {
+    font-weight: 500;
     padding-bottom: 0.25rem;
 }
 
 .form > div > input {
     height: 28px;
     max-width: 80%;
+    
+    padding: 16px 8px;
+    box-sizing: border-box;
+
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+
+    transition: border 0.25s;
 }
 
-
+.form > div > input:hover {
+    border: 2px solid #727377;
+}
 
 .submit-button {
   appearance: none;
@@ -234,7 +285,6 @@ body {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
